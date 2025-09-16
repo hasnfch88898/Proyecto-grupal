@@ -1,0 +1,132 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo animado oscuro */
+body {
+  background: linear-gradient(135deg, #111, #1a1a1a, #0d0d0d);
+  background-size: 300% 300%;
+  animation: fondoMove 20s ease infinite;
+  color: #e5e5e5;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animación del fondo */
+@keyframes fondoMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Efecto ruido tipo VHS */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('fd53db13616647f1ec8444566614feff.jpg');
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(20, 20, 20, 0.95) !important;
+  border-bottom: 2px solid #9b4dff;
+  z-index: 10;
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  color: #9b4dff !important;
+  text-shadow: 0 0 5px rgba(155, 77, 255, 0.5);
+}
+
+.nav-link {
+  color: #e5e5e5 !important;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #9b4dff !important;
+  transform: scale(1.05);
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  text-shadow: 0px 0px 15px rgba(155, 77, 255, 0.7);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+.hero .btn {
+  background: #9b4dff;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #7b33ff;
+  transform: scale(1.05);
+}
+
+/* Carrito */
+.carrito {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.95);
+  color: #fff;
+  transition: right 0.4s ease;
+  z-index: 20;
+}
+
+.carrito.open {
+  right: 0;
+}
+
+/* Footer */
+footer {
+  background: rgba(20, 20, 20, 0.95);
+  color: #aaa;
+  border-top: 2px solid #9b4dff;
+  position: relative;
+  z-index: 5;
+}
+
+footer a {
+  color: #9b4dff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
